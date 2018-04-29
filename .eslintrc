@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "camelcase": [
+      "off"
+    ]
+  },
+  "plugins": [
+    "standard",
+    "promise",
+    "jest"
+  ],
+  "globals": {
+    "shallow": true,
+    "mount": true,
+    "Element": true
+  },
+  "env": {
+    "jest/globals": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.3"
+    }
+  }
+}
