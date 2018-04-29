@@ -5,25 +5,23 @@ import { connect } from 'react-redux'
 import * as formActionCreator from './action'
 import MyForm from './page'
 
-
 class FormContainer extends Component {
-  render() {
+  render () {
     return (
       <MyForm {...this.props}/>
     )
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     name: state.name
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return bindActionCreators(formActionCreator, dispatch)
 }
 
 FormContainer.displayName = 'FormContainer'
 export default connect(mapStateToProps, mapDispatchToProps)(FormContainer)
-
