@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
+    "start":
+      "concurrently --kill-others \"npm run webpackDevServer\" \"npm run nodeServer\"",
+    "webpackDevServer": "webpack-dev-server",
     "nodeServer": "node ./server/server.js",
     "build": "webpack"
   },
@@ -20,6 +22,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.5.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
