@@ -1,10 +1,8 @@
 import React from 'react'
-import FormContainer from "../form";
+import MovieLayout from '../layout'
 
-const AppPage = ({children}) => {
-return (
-    <FormContainer/>
-  )
+const AppPage = () => {
+  return <MovieLayout />
 }
 
 AppPage.displayName = 'App'
